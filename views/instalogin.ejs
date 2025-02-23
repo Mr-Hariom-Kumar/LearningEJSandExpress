@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+</head>
+<body>
+    <h1>Welcome  @<%= usernameDummy%></h1>
+    <button>Follow</button>
+    <button>Message</button>
+    <p><%=fan%>follower</p>
+    
+    <%if(fan>=5){%>
+        <h5>OW Waoo you are a Celebrity</h5>
+    <%}%>
+    <h3>Account who follow you</h3>
+        <ul>
+            <%for(let name of followers){%>
+                    <li><%=name%></li>
+                <%}%>
+        </ul>
+</body>
+</html>
