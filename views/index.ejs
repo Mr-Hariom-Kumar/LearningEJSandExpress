@@ -7,11 +7,16 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <h1><i>Breaking News</i></h1>
+    <div class="create"><a href="http://localhost:3000/posts/new">Create your post</a></div>
+    <h1>Breaking News</h1>
         <%for(let post of posts){%>
-            <h4><%=post.headlines%></h4>
-            <div><%=post.content%></div>
+            <h2><%=post.headlines%></h2>
+            <div>
+                <%=post.content%>
+                <a href="http://localhost:3000/posts/<%=post.id%>">Read more</a>
+            </div>
             <p>~by <%=post.user%></p>
+
         <%}%>
 </body>
 </html>
